@@ -1,0 +1,6 @@
+services:
+  proxy:
+    build:
+      context: ..
+    networks:
+      - zero-trust-net

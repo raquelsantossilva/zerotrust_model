@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_redes
+    environment:
+      POSTGRES_DB: ufc_data
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: minha_senha
+    ports:
+      - "5434:5432"
+    networks:
+      - zero-trust-net
+  
+  conection:
+    image: python:3.12-slim
+    container_name: create_postegres_db
+    command: >
+      bash -c "pip install psycopg2-binary && python /app/conection.py"
+    volumes:
+      - ..:/app
+    networks:
+      - zero-trust-net
+    depends_on:
+      - db
+    
+networks:
+  zero-trust-net:
+    driver: bridge
