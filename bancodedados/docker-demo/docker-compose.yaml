@@ -6,8 +6,8 @@ services:
       POSTGRES_DB: ufc_data
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: minha_senha
-    ports:
-      - "5434:5432"
+    #ports:
+    #  - "5434:5432"
     networks:
       - zero-trust-net
   
@@ -22,7 +22,21 @@ services:
       - zero-trust-net
     depends_on:
       - db
-    
+  
+  proxy:
+    container_name: link_proxy
+    build:
+      context: ../../
+      dockerfile: bancodedados/docker-demo/Dockerfile
+    ports:
+      - "8082:8000"
+    restart: on-failure # SE O BANCO RECUSAR A CONEXÃO, O DOCKER TENTA LIGAR A PROXY DE NOVO!
+    depends_on:
+      - db
+    networks:
+      - zero-trust-net
+
+
 networks:
   zero-trust-net:
     driver: bridge
