@@ -1,0 +1,57 @@
+# Zero Trust - PEP (proxy FastAPI) + PDP (modelo de risco) + PostgreSQL isolado.
+#
+#   docker compose up --build                       # sobe db + proxy (porta 8082)
+#   docker compose --profile simulacao run --rm simulador   # roda os cenarios de teste
+#
+# Microssegmentacao: o banco fica numa rede `backend` INTERNA (sem saida e sem
+# porta publicada); so o proxy participa das duas redes.
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_redes
+    environment:
+      POSTGRES_DB: ufc_data
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-minha_senha}   # defina no .env em uso real
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ufc_data"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    networks: [backend]
+
+  proxy:
+    build: .
+    container_name: link_proxy
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_DB: ufc_data
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-minha_senha}
+      ZT_SIMULATION: "1"        # ACADEMICO: habilita cabecalhos de simulacao. Use 0 fora de testes.
+      ZT_TZ: America/Fortaleza
+    ports:
+      - "8082:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: on-failure
+    networks: [backend, frontend]
+
+  simulador:
+    build: .
+    profiles: ["simulacao"]
+    command: ["python", "simular.py", "--url", "http://proxy:8000",
+              "--repeticoes", "5", "--saida", "/app/saida/resultados"]
+    volumes:
+      - ./saida:/app/saida
+    depends_on: [proxy]
+    networks: [frontend]
+
+networks:
+  backend:
+    driver: bridge
+    internal: true
+  frontend:
+    driver: bridge

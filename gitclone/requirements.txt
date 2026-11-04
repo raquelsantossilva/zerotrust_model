@@ -1,0 +1,11 @@
+# Versoes testadas (Python 3.12)
+fastapi==0.162.0
+uvicorn==0.54.0
+psycopg2-binary==2.9.13
+scikit-learn==1.8.0
+numpy==2.4.4
+pydantic==2.14.1
+httpx==0.28.1
+tzdata==2026.5
+# desenvolvimento / testes
+pytest==9.1.1

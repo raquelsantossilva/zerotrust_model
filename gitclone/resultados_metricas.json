@@ -1,0 +1,249 @@
+{
+  "agregado": {
+    "repeticoes": 5,
+    "taxa_bloqueio_correto": [
+      0.8906,
+      0.032
+    ],
+    "taxa_falso_positivo": [
+      0.0,
+      0.0
+    ],
+    "falsos_negativos_por_rep": [
+      27.6,
+      10.2879
+    ],
+    "restricoes_indevidas_por_rep": [
+      1,
+      1.5492
+    ],
+    "lat_decisao_p50_ms": [
+      4.7152,
+      0.0351
+    ],
+    "lat_decisao_p95_ms": [
+      8.1594,
+      0.1302
+    ],
+    "lat_resposta_p50_ms": [
+      6.0244,
+      0.0479
+    ],
+    "lat_resposta_p95_ms": [
+      110.6764,
+      4.1488
+    ]
+  },
+  "por_repeticao": [
+    {
+      "totais": {
+        "total": 539,
+        "permitir": 313,
+        "restringir": 7,
+        "negar": 219,
+        "sem_rotulo": 0
+      },
+      "negadas_por_sessao_revogada": 84,
+      "credenciais_invalidas": 64,
+      "alteracoes_privilegio": {
+        "reducoes": 7,
+        "restauracoes": 0,
+        "sessoes_revogadas": 29
+      },
+      "avaliacao_rotulada": {
+        "acessos_indevidos_bloqueados": 226,
+        "acessos_indevidos_que_passaram": 26,
+        "legitimos_bloqueados_falsos_positivos": 0,
+        "legitimos_com_privilegio_reduzido": 0,
+        "legitimos_permitidos": 287,
+        "taxa_bloqueio_correto": 0.8968,
+        "taxa_falso_positivo": 0.0,
+        "precisao_bloqueio": 1.0
+      },
+      "latencia_decisao_modelo": {
+        "n": 539,
+        "media_ms": 4.701,
+        "p50_ms": 4.734,
+        "p95_ms": 8.139,
+        "p99_ms": 11.256,
+        "max_ms": 12.754
+      },
+      "latencia_resposta_total": {
+        "n": 539,
+        "media_ms": 24.461,
+        "p50_ms": 6.097,
+        "p95_ms": 105.047,
+        "p99_ms": 138.549,
+        "max_ms": 158.533
+      }
+    },
+    {
+      "totais": {
+        "total": 523,
+        "permitir": 303,
+        "restringir": 13,
+        "negar": 207,
+        "sem_rotulo": 0
+      },
+      "negadas_por_sessao_revogada": 76,
+      "credenciais_invalidas": 64,
+      "alteracoes_privilegio": {
+        "reducoes": 11,
+        "restauracoes": 0,
+        "sessoes_revogadas": 26
+      },
+      "avaliacao_rotulada": {
+        "acessos_indevidos_bloqueados": 220,
+        "acessos_indevidos_que_passaram": 20,
+        "legitimos_bloqueados_falsos_positivos": 0,
+        "legitimos_com_privilegio_reduzido": 0,
+        "legitimos_permitidos": 283,
+        "taxa_bloqueio_correto": 0.9167,
+        "taxa_falso_positivo": 0.0,
+        "precisao_bloqueio": 1.0
+      },
+      "latencia_decisao_modelo": {
+        "n": 523,
+        "media_ms": 4.796,
+        "p50_ms": 4.751,
+        "p95_ms": 8.239,
+        "p99_ms": 12.143,
+        "max_ms": 15.919
+      },
+      "latencia_resposta_total": {
+        "n": 523,
+        "media_ms": 25.831,
+        "p50_ms": 5.971,
+        "p95_ms": 111.893,
+        "p99_ms": 143.197,
+        "max_ms": 153.991
+      }
+    },
+    {
+      "totais": {
+        "total": 540,
+        "permitir": 311,
+        "restringir": 15,
+        "negar": 214,
+        "sem_rotulo": 0
+      },
+      "negadas_por_sessao_revogada": 81,
+      "credenciais_invalidas": 64,
+      "alteracoes_privilegio": {
+        "reducoes": 15,
+        "restauracoes": 0,
+        "sessoes_revogadas": 30
+      },
+      "avaliacao_rotulada": {
+        "acessos_indevidos_bloqueados": 225,
+        "acessos_indevidos_que_passaram": 27,
+        "legitimos_bloqueados_falsos_positivos": 0,
+        "legitimos_com_privilegio_reduzido": 4,
+        "legitimos_permitidos": 284,
+        "taxa_bloqueio_correto": 0.8929,
+        "taxa_falso_positivo": 0.0,
+        "precisao_bloqueio": 0.9825
+      },
+      "latencia_decisao_modelo": {
+        "n": 540,
+        "media_ms": 4.675,
+        "p50_ms": 4.744,
+        "p95_ms": 7.936,
+        "p99_ms": 11.462,
+        "max_ms": 17.614
+      },
+      "latencia_resposta_total": {
+        "n": 540,
+        "media_ms": 24.668,
+        "p50_ms": 6.037,
+        "p95_ms": 106.91,
+        "p99_ms": 134.658,
+        "max_ms": 155.455
+      }
+    },
+    {
+      "totais": {
+        "total": 556,
+        "permitir": 327,
+        "restringir": 6,
+        "negar": 223,
+        "sem_rotulo": 0
+      },
+      "negadas_por_sessao_revogada": 85,
+      "credenciais_invalidas": 64,
+      "alteracoes_privilegio": {
+        "reducoes": 6,
+        "restauracoes": 0,
+        "sessoes_revogadas": 28
+      },
+      "avaliacao_rotulada": {
+        "acessos_indevidos_bloqueados": 229,
+        "acessos_indevidos_que_passaram": 47,
+        "legitimos_bloqueados_falsos_positivos": 0,
+        "legitimos_com_privilegio_reduzido": 0,
+        "legitimos_permitidos": 280,
+        "taxa_bloqueio_correto": 0.8297,
+        "taxa_falso_positivo": 0.0,
+        "precisao_bloqueio": 1.0
+      },
+      "latencia_decisao_modelo": {
+        "n": 556,
+        "media_ms": 4.707,
+        "p50_ms": 4.684,
+        "p95_ms": 8.327,
+        "p99_ms": 11.797,
+        "max_ms": 13.801
+      },
+      "latencia_resposta_total": {
+        "n": 556,
+        "media_ms": 24.762,
+        "p50_ms": 6.045,
+        "p95_ms": 113.145,
+        "p99_ms": 148.905,
+        "max_ms": 181.093
+      }
+    },
+    {
+      "totais": {
+        "total": 491,
+        "permitir": 292,
+        "restringir": 7,
+        "negar": 192,
+        "sem_rotulo": 0
+      },
+      "negadas_por_sessao_revogada": 65,
+      "credenciais_invalidas": 64,
+      "alteracoes_privilegio": {
+        "reducoes": 7,
+        "restauracoes": 0,
+        "sessoes_revogadas": 25
+      },
+      "avaliacao_rotulada": {
+        "acessos_indevidos_bloqueados": 198,
+        "acessos_indevidos_que_passaram": 18,
+        "legitimos_bloqueados_falsos_positivos": 0,
+        "legitimos_com_privilegio_reduzido": 1,
+        "legitimos_permitidos": 274,
+        "taxa_bloqueio_correto": 0.9167,
+        "taxa_falso_positivo": 0.0,
+        "precisao_bloqueio": 0.995
+      },
+      "latencia_decisao_modelo": {
+        "n": 491,
+        "media_ms": 4.738,
+        "p50_ms": 4.663,
+        "p95_ms": 8.156,
+        "p99_ms": 10.031,
+        "max_ms": 26.181
+      },
+      "latencia_resposta_total": {
+        "n": 491,
+        "media_ms": 27.256,
+        "p50_ms": 5.972,
+        "p95_ms": 116.387,
+        "p99_ms": 150.633,
+        "max_ms": 180.289
+      }
+    }
+  ]
+}
